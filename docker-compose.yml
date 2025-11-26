@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  spark-notebook:
+    image: jupyter/pyspark-notebook:latest
+    container_name: flunet-spark-notebook
+    ports:
+      - "8888:8888"
+    volumes:
+      - ./data:/home/jovyan/work/data
+      - ./notebooks:/home/jovyan/work
